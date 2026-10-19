@@ -2,9 +2,15 @@
 requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.package-dir]
+"testgres_exts.pglab" = "src"
+
+[tool.setuptools.dynamic]
+version = {attr = "testgres_exts.pglab.__version__"}
+
 [project]
-name = "testgres-pglab"
-version = "0.1.0"
+name = "testgres_exts.pglab"
+dynamic = ["version"]
 description = "Linux netns/cgroup/netem fault injection for PostgreSQL tests using Testgres"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -32,9 +38,6 @@ classifiers = [
 test = [
     "pytest>=8,<10",
 ]
-
-[tool.setuptools]
-py-modules = ["pglab"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

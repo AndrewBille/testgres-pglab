@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from pglab import PgLab
+from src import PgLab
 
 
 PG_BIN = os.environ.get("PG_BIN", "/home/andrew/pgpro/build/master/bin")

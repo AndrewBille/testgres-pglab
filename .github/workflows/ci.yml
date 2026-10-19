@@ -43,17 +43,21 @@ jobs:
 
   test-pglab:
     runs-on: ubuntu-24.04
-    name: "test: pglab | ubuntu-24.04 | pg16"
+    name: "test: pglab | ubuntu-24.04 | pg16 | py${{ matrix.python-version }}"
     needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
     - name: Checkout
       uses: actions/checkout@v7
 
-    - name: Set up Python 3.12
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v7
       with:
-        python-version: "3.12"
+        python-version: ${{ matrix.python-version }}
         cache: 'pip'
 
     - name: Install PostgreSQL and PgLab system dependencies
@@ -103,5 +107,5 @@ jobs:
       uses: actions/upload-artifact@v7
       if: always()
       with:
-        name: testgres--pglab-logs--id${{ github.run_id }}
+        name: testgres--pglab-logs--py${{ matrix.python-version }}--id${{ github.run_id }}
         path: logs-pglab/

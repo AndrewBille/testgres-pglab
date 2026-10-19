@@ -34,7 +34,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install flake8 flake8-pyproject ruff==0.15.22
-    - name: Lint with flake8 pglab.py tests/
+    - name: Lint with flake8
       run: |
         flake8 .
     - name: Lint with ruff

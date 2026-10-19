@@ -7,7 +7,7 @@ name = "testgres-pglab"
 version = "0.1.0"
 description = "Linux netns/cgroup/netem fault injection for PostgreSQL tests using Testgres"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.8"
 license = "PostgreSQL"
 dependencies = [
     "testgres @ git+https://github.com/AndrewBille/testgres.git@target-execution-context",
@@ -17,6 +17,13 @@ classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Testing",
     "Topic :: Database",
 ]

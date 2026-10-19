@@ -1,2 +1,2 @@
 pytest
-git+https://github.com/AndrewBille/testgres.git@target-execution-context
+git+https://github.com/postgrespro/testgres.git@master

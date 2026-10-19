@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = "PostgreSQL"
 dependencies = [
-    "testgres>=1.17.0",
+    "testgres @ git+https://github.com/AndrewBille/testgres.git@target-execution-context",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",

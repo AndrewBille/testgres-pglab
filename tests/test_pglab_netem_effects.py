@@ -322,6 +322,7 @@ def test_netem_loss_creates_real_replication_lag_then_recovers(lab):
 
     assert recovered_lag < lag
 
+
 def test_replica_cannot_recover_after_required_wal_is_recycled(lab):
     """A long enough outage must become unrecoverable without WAL retention.
 

@@ -5,20 +5,20 @@ import inspect
 import ipaddress
 import os
 import pwd
-import shlex
 import signal
 import shutil
 import stat
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Optional, Union, Any
+from typing import Optional
 
 from testgres.api import get_new_node
 from testgres.backup import NodeBackup
 from testgres.node import PostgresNode
 from testgres.operations.local_ops import LocalOperations
 import tempfile
+
 
 class PgLabError(RuntimeError):
     pass
